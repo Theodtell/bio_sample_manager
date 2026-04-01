@@ -3,7 +3,7 @@
 ## 📌 Description
 A simple Python system for managing biological samples.
 
-This project was created for learning purposes, focusing on programming logic and data organization using basic Python concepts.
+This project was created for learning purposes, focusing on programming logic, code organization, and data handling using Python.
 
 ---
 
@@ -15,14 +15,16 @@ Practice fundamental programming concepts such as:
 - Loops (while, for)  
 - Input validation  
 - Lists  
+- Functions (basic modularization)  
 
 ---
 
-## ⚙️ Current Features (Step 1)
+## ⚙️ Current Features
 
 - Register biological samples  
 - Store sample data in memory  
 - List all registered samples  
+- Remove samples  
 
 Each sample contains:
 
@@ -33,15 +35,27 @@ Each sample contains:
 
 ---
 
+## 🗂️ Project Structure
+
+```
+bio_sample_manager/
+│
+├── main.py        # Controls program flow (menu)
+├── samples.py     # Business logic (register, list, delete)
+└── README.md
+```
+
 ## 🚧 Project Status
 
 This project is under development and will evolve step by step.
 
-Future improvements may include:
+Next planned improvements:
 
-- Code organization using functions  
+- Search samples  
+- Improve input validation  
+- Better code organization  
 - Data persistence (files or database)  
-- Modular structure  
+- Modular architecture  
 - API integration  
 - Possible AI features  
 
@@ -49,13 +63,14 @@ Future improvements may include:
 
 ## 🧠 Learning Focus
 
-This project was intentionally built using only basic Python concepts, without:
+This project was intentionally built starting with basic Python concepts and gradually evolving.
 
-- Functions  
-- External libraries  
-- File handling  
+Concepts already applied:
 
-The goal is to strengthen logical thinking before moving to more advanced topics.
+- Logical thinking  
+- Code organization  
+- Function separation  
+- Reusability (DRY principle)  
 
 ---
 
