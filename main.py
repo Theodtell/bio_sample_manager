@@ -1,5 +1,5 @@
 from time import sleep
-from samples import register_sample, list_samples, delete_sample
+from samples import register_sample, list_samples, delete_sample, search_sample
 samples = []
 
 while True:
@@ -21,8 +21,8 @@ while True:
         list_samples(samples)
     elif option == 3:
         delete_sample(samples)
-    #elif option == 4:
-        #search_sample(samples)
+    elif option == 4:
+        search_sample(samples)
     elif option == 5:
         print('Finalizando programa...')
         print('-' * 30)

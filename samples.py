@@ -40,6 +40,7 @@ def list_samples(samples):
 
 def delete_sample(samples):
     if len(samples) == 0:
+        print('Nenhuma amostra cadastrada!')
         return
 
     list_samples(samples)
@@ -59,3 +60,42 @@ def delete_sample(samples):
         print('Amostra removida com sucesso!')
     else:
         print('Operação cancelada!')
+
+def search_sample(samples):
+    if len(samples) == 0:
+        print('Nenhuma amostra cadastrada!')
+        return
+
+    while True:
+        search = int(input('''  Você deseja buscar por:   
+    1 - Nome da amostra
+    2 - tipo da amostra
+    '''))
+        if search == 1:
+            name = str(input('Digite o nome da amostra: ')).lower()
+
+            found = False
+
+            for sample in samples:
+                sample_name = sample[0].lower()
+
+                if name in sample_name:
+                    print(f'Nome: {sample[0]} | Tipo: {sample[1]} | Data: {sample[2]} | Observação: {sample[3]}')
+                    found = True
+            if not found:
+                print('Nenhuma amostra encontrada com esse nome')
+
+        elif search == 2:
+            search_type = str(input('Digite o tipo da amostra: ')).lower()
+
+            found = False
+
+            for sample in samples:
+                sample_type_value = sample[1].lower()
+
+                if search_type in sample_type_value:
+                    print(f'Nome: {sample[0]} | Tipo: {sample[1]} | Data: {sample[2]} | Observação: {sample[3]}')
+                    found = True
+            if not found:
+                print('Nenhuma amostra encontrada com esse tipo')
+            break
