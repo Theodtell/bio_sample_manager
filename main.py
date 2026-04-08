@@ -1,6 +1,8 @@
 from time import sleep
-from samples import register_sample, list_samples, delete_sample, search_sample
-samples = []
+from samples import register_sample, list_samples, delete_sample, search_sample, load_samples
+from utils import read_int
+
+samples = load_samples()
 
 while True:
     sleep(0.5)
@@ -8,13 +10,13 @@ while True:
     print('  ====MENU===='.center(30))
     print('Selecione a função desejada:'.center(30))
     print('-' * 30)
-    option = int(input('''
+    option = read_int('''
     1 - Cadastrar amostras
     2 - Listar amostras
     3 - Remover amostra
     4 - Buscar amostra 
     5- Sair do programa 
-    '''))
+    ''')
     if option == 1:
         register_sample(samples)
     elif option == 2:
